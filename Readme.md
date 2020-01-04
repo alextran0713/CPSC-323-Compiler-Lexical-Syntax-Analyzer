@@ -9,7 +9,7 @@ Program also print out Symbol Table, and Assembly code instructions.
 
 The project included the following functionality: 
 
-Reading in an input file. 
+	Reading in an input file. 
 
 	Print out Lexeme and Token.
 
