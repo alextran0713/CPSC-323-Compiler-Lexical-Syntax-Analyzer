@@ -1,0 +1,82 @@
+Token: KEYWORD	Lexeme: int
+	<Statement> -> <Compound> | <Assign> | If<Conditional> | Else | While<Expression> 
+Token: IDENTIFIER	Lexeme: num
+	<Statement> -> <Compound> | <Assign> | <If> 
+	<Assign> -> <Identifier> = <Expression>  
+Token: IDENTIFIER	Lexeme: nu2m
+	<Statement> -> <Compound> | <Assign> | <If> 
+	<Assign> -> <Identifier> = <Expression>  
+Token: IDENTIFIER	Lexeme: sum
+	<Statement> -> <Compound> | <Assign> | <If> 
+	<Assign> -> <Identifier> = <Expression>  
+Token: SEPARATOR	Lexeme: ;
+Token: IDENTIFIER	Lexeme: num
+	<Statement> -> <Compound> | <Assign> | <If> 
+	<Assign> -> <Identifier> = <Expression>  
+Token: OPERATOR		Lexeme: =
+Token: INTEGER	Lexeme: 0
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> <Primary>
+	<Primary> -> <Identifier> 
+Token: SEPARATOR	Lexeme: ;
+Token: IDENTIFIER	Lexeme: nu2m
+	<Statement> -> <Compound> | <Assign> | <If> 
+	<Assign> -> <Identifier> = <Expression>  
+Token: OPERATOR		Lexeme: =
+Token: INTEGER	Lexeme: 15
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> <Primary>
+	<Primary> -> <Identifier> 
+Token: SEPARATOR	Lexeme: ;
+Token: IDENTIFIER	Lexeme: sum
+	<Statement> -> <Compound> | <Assign> | <If> 
+	<Assign> -> <Identifier> = <Expression>  
+Token: OPERATOR		Lexeme: =
+Token: INTEGER	Lexeme: 0
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> <Primary>
+	<Primary> -> <Identifier> 
+Token: SEPARATOR	Lexeme: ;
+Token: IDENTIFIER	Lexeme: sum
+	<Statement> -> <Compound> | <Assign> | <If> 
+	<Assign> -> <Identifier> = <Expression>  
+Token: OPERATOR		Lexeme: =
+Token: IDENTIFIER	Lexeme: num
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> <Primary>
+	<Primary> -> <Identifier> 
+Token: OPERATOR		Lexeme: +
+	<Empty> -> Epsilon
+	<Expression Prime> -> + <Term> <Expression Prime> |  <Empty>
+Token: IDENTIFIER	Lexeme: nu2m
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> <Primary>
+	<Primary> -> <Identifier> 
+Token: SEPARATOR	Lexeme: ;
+
+
+			Symbol table     
+------------------------------------------------------------
+Identifier          Memory Location     Type                
+nu2m                5001                interger            
+num                 5000                interger            
+sum                 5002                interger            
+
+
+			Instructions table
+------------------------------------------------------------
+Step #              Instructions        Address             
+1                   PUSHM               nil                 
+2                   POPM                5000                
+3                   PUSHM               nil                 
+4                   POPM                5001                
+5                   PUSHM               nil                 
+6                   POPM                5002                
+7                   PUSHM               5000                
+8                   PUSHM               5001                
+9                   ADD                 nil                 
+10                  POPM                5002                
