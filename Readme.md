@@ -11,10 +11,10 @@ The project included the following functionality:
 
 Reading in an input file. 
 
-Print out Lexeme and Token.
+	Print out Lexeme and Token.
 
-Print out Rules that used to process an equation.
+	Print out Rules that used to process an equation.
 
-For example: a + b = c
+	For example: a + b = c
 
-Print out Symbol Table and Assembly code instructions.
+	Print out Symbol Table and Assembly code instructions.
